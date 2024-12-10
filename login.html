@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sign Up Form -->
+        <div class="form-container" id="signup-form">
+            <h2>Sign Up</h2>
+            <input class="inp" type="text" id="signup-username" placeholder="Username" />
+            <input class="inp" type="password" id="signup-password" placeholder="Password" />
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLoginForm()">Login here</a></p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-container" id="login-form" style="display: none;">
+            <h2>Login</h2>
+            <input class="inp" type="text" id="login-username" placeholder="Username" />
+            <input class="inp" type="password" id="login-password" placeholder="Password" />
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignupForm()">Sign up here</a></p>
+        </div>
+
+        <!-- User Details (shown after login) -->
+        <div class="user-details" id="user-details" style="display: none;">
+            <h2>Welcome, <span id="user-name"></span>!</h2>
+            <p>Username: <span id="user-username"></span></p>
+            <p>Password: <span id="user-password"></span></p>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
